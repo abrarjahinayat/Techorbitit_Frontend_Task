@@ -10,4 +10,6 @@
    --font-poppins: var(--font-poppins);
    --font-geist: var(--font-geist-sans);
    --color-primary-text : #1A1A1A;
+   --color-button : #B0DD1D;
+   --color-banner-background : #F2F4F6;
 }

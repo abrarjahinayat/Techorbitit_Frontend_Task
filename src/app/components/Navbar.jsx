@@ -22,7 +22,7 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <div className="absolute left-1/2 top-6 -translate-x-1/2">
+        <div className="absolute z-999 left-1/2 top-6 -translate-x-1/2">
             <img src={logo.src} alt="" className="w-32 h-auto" />
         </div>
         <div className="flex gap-[50px] items-center" >
