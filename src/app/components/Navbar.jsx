@@ -1,5 +1,6 @@
 import { Search, UserRound } from "lucide-react";
 import React from "react";
+import logo from '@/images/logo.png'
 
 const Navbar = () => {
   return (
@@ -20,6 +21,9 @@ const Navbar = () => {
               <a href="#">Contact</a>
             </li>
           </ul>
+        </div>
+        <div className="absolute left-1/2 top-6 -translate-x-1/2">
+            <img src={logo.src} alt="" className="w-32 h-auto" />
         </div>
         <div className="flex gap-[50px] items-center" >
           <div className="flex gap-3 items-center text-primary-text font-normal cursor-pointer">
