@@ -6,6 +6,7 @@ import AgriProducts from './components/Resuable_components/AgriProducts'
 import LandScapeProducts from './components/Resuable_components/LandScapeProducts'
 import Trusted from './components/Trusted'
 import WhyUs from './components/WhyUs'
+import Sticker from './components/Sticker'
 
 
 export default function page() {
@@ -17,6 +18,7 @@ export default function page() {
       <LandScapeProducts/>
       <Trusted/>
      <WhyUs/>
+     <Sticker/>
     </div>
   )
 }
