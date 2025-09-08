@@ -9,7 +9,7 @@ const WhyCard = () => {
     <section className='font-poppins flex flex-wrap justify-between mt-[110px]'>
       <div className='w-[400px] relative bg-[#F2F4F6] rounded-[10px] px-10 py-10 hover:shadow-lg hover:scale-105 duration-300 cursor-pointer overflow-hidden'>
         
-        {/* Radial gradient with Gaussian blur */}
+      
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_right_top,_#1B7FE1,_transparent_40%)] opacity-40 "></div>
         
         <Image src={why1} alt='why1' className='w-15 h-auto relative z-10'/>

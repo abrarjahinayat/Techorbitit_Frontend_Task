@@ -9,6 +9,8 @@ import WhyUs from './components/WhyUs'
 import Sticker from './components/Sticker'
 import Customers from './components/Customers'
 import OurBranches from './components/OurBranches'
+import Footer from './components/Footer'
+import CopyRight from './components/CopyRight'
 
 
 export default function page() {
@@ -23,6 +25,8 @@ export default function page() {
      <Sticker/>
      <Customers/>
      <OurBranches/>
+     <Footer/>
+     <CopyRight/>
     </div>
   )
 }

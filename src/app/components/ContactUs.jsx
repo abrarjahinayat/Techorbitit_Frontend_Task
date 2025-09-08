@@ -6,7 +6,8 @@ const ContactUs = () => {
   return (
     <section className='container font-poppins'>
         <div className='flex gap-2.5'>
-        <div className='bg-[#002B55] w-[60%] rounded-2xl p-12.5'>
+        <div className='bg-[#002B55] relative w-[60%] rounded-2xl p-12.5'>
+             <div className="absolute inset-0 bg-[radial-gradient(circle_at_right_bottom,_#1B7FE1,_transparent_40%)] opacity-40 "></div>
             <h2 className='text-[38px] text-white font-medium'>Contact Us</h2>
             <form action="#">
                 <input className='bg-white/10 text-white rounded-full text-lg font-normal px-7.5 py-5 w-full mt-7.5' type="text" placeholder='Your Name' /> 
