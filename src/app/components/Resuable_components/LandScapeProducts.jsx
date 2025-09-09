@@ -44,7 +44,7 @@ const products = [
 export default function LandScapeProducts() {
   return (
     <main className="p-10 container">
-      <h3 className="text-[42px] font-medium mb-[30px] text-primary-text">
+      <h3 className="lg:text-[42px] text-2xl md:text-3xl font-medium mb-[30px] text-primary-text">
         Landscape Products
       </h3>
       <ProductSlider products={products} />

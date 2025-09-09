@@ -28,7 +28,8 @@ const Carousel = () => {
       image: grass.src,
       title: "Modern Wall Design",
       subtitle: "Stylish & Functional",
-    }, {
+    },
+    {
       image: grass.src,
       title: "JF Privezy Grass Wall",
       subtitle: "The Perfect Blend of Greenery",
@@ -56,50 +57,61 @@ const Carousel = () => {
   }, [swiperInstance]);
 
   return (
-    <div className="w-full relative font-poppins">
+    <div className="w-full relative font-poppins mt-20">
       {/* Custom arrows */}
       <button
         ref={prevRef}
-        className="absolute w-12 h-12 left-0 top-1/2 -translate-y-1/2 z-10 bg-button text-black p-3 rounded-full shadow-lg hover:bg-button/95"
+        className="absolute w-10 h-10 sm:w-12 sm:h-12 left-2 sm:left-0 lg:left-110 top-1/2 -translate-y-1/2 z-10 bg-button text-black p-2 sm:p-3 rounded-full shadow-lg hover:bg-button/95"
       >
-        <MoveLeft />
+        <MoveLeft className="w-5 h-5 sm:w-6 sm:h-6" />
       </button>
       <button
         ref={nextRef}
-        className="absolute w-12 h-12 right-0 top-1/2 -translate-y-1/2 z-10 bg-button text-black p-3 rounded-full shadow-lg hover:bg-button/95"
+        className="absolute w-10 h-10 sm:w-12 sm:h-12 right-2 sm:right-0 lg:right-110 top-1/2 -translate-y-1/2 z-10 bg-button text-black p-2 sm:p-3 rounded-full shadow-lg hover:bg-button/95"
       >
-        <MoveRight />
+        <MoveRight className="w-5 h-5 sm:w-6 sm:h-6" />
       </button>
 
       <Swiper
         modules={[Navigation]}
         centeredSlides={true}
         loop={true}
-        spaceBetween={50}
+        spaceBetween={20}
         slideToClickedSlide={true}
         slidesPerView={1}
         onSwiper={setSwiperInstance} // Set Swiper instance
         breakpoints={{
-          1920: { slidesPerView: 4, spaceBetween: 30 },
-          1028: { slidesPerView: 2, spaceBetween: 10 },
-          990: { slidesPerView: 1, spaceBetween: 0 },
+          990: { slidesPerView: 1, spaceBetween: 0 }, // Mobile + Tablet
+          1028: { slidesPerView: 2, spaceBetween: 10 }, // Tablet landscape
+          1920: { slidesPerView: 4, spaceBetween: 30 }, // Desktop
         }}
         className="relative"
       >
         {slides.map((slide, index) => (
           <SwiperSlide key={index}>
-            <div className="bg-banner-background rounded-2xl p-10 flex items-center gap-[70px] relative">
+            <div className="bg-banner-background rounded-2xl p-6 sm:p-8 lg:p-10 flex flex-col lg:flex-row items-center gap-6 lg:gap-[70px] relative text-center lg:text-left">
+              {/* Image */}
               <div>
                 <img
-                  className="w-[500px] h-[500px]"
+                  className="w-[220px] h-[220px] sm:w-[320px] sm:h-[320px] lg:w-[500px] lg:h-[500px] object-contain"
                   src={slide.image}
                   alt={slide.title}
                 />
               </div>
 
+              {/* Text */}
               <div>
-                <h1 className="font-medium text-[50px]">{slide.title}</h1>
-                <h5 className="font-normal text-[20px]">{slide.subtitle}</h5>
+                <h1 className="font-medium text-xl sm:text-3xl lg:text-[50px]">
+                  {slide.title}
+                </h1>
+                <h5 className="font-normal text-sm sm:text-lg lg:text-[20px] mt-2">
+                  {slide.subtitle}
+                </h5>
+                <button
+                  className="mt-6 sm:mt-8 lg:mt-12.5 w-max px-5 sm:px-7.5 py-2.5 sm:py-3 bg-button text-xs sm:text-sm lg:text-sm text-primary-text font-medium rounded-full hover:bg-button/70"
+                >
+                  Shop Now
+                </button>
               </div>
             </div>
           </SwiperSlide>

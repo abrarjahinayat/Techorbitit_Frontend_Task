@@ -18,8 +18,8 @@ const products = [
 
 export default function AgriProducts() {
   return (
-    <main className="p-10 container">
-       <h3 className='text-[42px] font-medium mb-[30px] text-primary-text'>Agricultural Products</h3>
+    <main id="shop" className="p-10 container">
+       <h3 className='lg:text-[42px] text-2xl md:text-3xl font-medium mb-[30px] text-primary-text'>Agricultural Products</h3>
       <ProductSlider products={products} />
     </main>
   );

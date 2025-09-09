@@ -32,9 +32,10 @@ const ProductSlider = ({ products }) => {
         loop
         onSwiper={setSwiperInstance}
         breakpoints={{
-          640: { slidesPerView: 1 },
-          768: { slidesPerView: 2 },
-          1024: { slidesPerView: 4 },
+          0: { slidesPerView: 1, spaceBetween: 10 }, // ✅ Mobile
+          640: { slidesPerView: 1, spaceBetween: 15 },
+          768: { slidesPerView: 2, spaceBetween: 20 }, // Tablet
+          1024: { slidesPerView: 4, spaceBetween: 20 }, // Desktop
         }}
       >
         {products.map((product, index) => (
@@ -47,15 +48,30 @@ const ProductSlider = ({ products }) => {
       {/* Custom navigation buttons */}
       <div
         ref={prevRef}
-        className="absolute left-[-20px] top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-white border flex justify-center items-center shadow cursor-pointer hover:scale-110 transition"
+        className="
+          absolute top-1/2 -translate-y-1/2 z-10 
+          w-8 h-8 sm:w-12 sm:h-12 
+          left-2 sm:left-[-20px] 
+          rounded-full bg-white border 
+          flex justify-center items-center shadow cursor-pointer 
+          hover:scale-110 transition
+        "
       >
-        <span className="text-black text-2xl font-bold">&#8592;</span>
+        <span className="text-black text-lg sm:text-2xl font-bold">&#8592;</span>
       </div>
+
       <div
         ref={nextRef}
-        className="absolute right-[-20px] top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-white border flex justify-center items-center shadow cursor-pointer hover:scale-110 transition"
+        className="
+          absolute top-1/2 -translate-y-1/2 z-10 
+          w-8 h-8 sm:w-12 sm:h-12 
+          right-2 sm:right-[-20px] 
+          rounded-full bg-white border 
+          flex justify-center items-center shadow cursor-pointer 
+          hover:scale-110 transition
+        "
       >
-        <span className="text-black text-2xl font-bold">&#8594;</span>
+        <span className="text-black text-lg sm:text-2xl font-bold">&#8594;</span>
       </div>
     </div>
   );

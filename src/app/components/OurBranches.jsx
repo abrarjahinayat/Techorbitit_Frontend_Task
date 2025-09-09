@@ -9,7 +9,7 @@ import Image from 'next/image'
 import ContactUs from './ContactUs'
 const OurBranches = () => {
   return (
-    <section className='container py-25'>
+    <section id='contactus' className='container py-25'>
         <div className="border border-gray-300 rounded-lg ">
         <button className='bg-button relative -top-5 text-sm p-2.5 text-primary-text font-medium rounded-full hover:bg-button/70 mx-auto block' >
             Our Branches

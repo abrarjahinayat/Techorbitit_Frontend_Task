@@ -1,8 +1,12 @@
 @import "tailwindcss";
 
+html {
+  scroll-behavior: smooth;
+}
+
 @layer components{
   .container{
-    @apply mx-auto !max-w-[1280px] lg:px-0 px-2;
+    @apply mx-auto !max-w-[1280px] lg:px-0 px-3;
   }
 }
 
